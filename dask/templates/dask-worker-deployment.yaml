@@ -29,8 +29,3 @@ spec:
           ports:
             - containerPort: {{ .Values.worker.containerPort }}
           resources: {{ toYaml .Values.worker.resources | indent 12 }}
-          env:
-          - name: EXTRA_CONDA_PACKAGES
-            value: {{ .Values.worker.condaPackages }}
-          - name: EXTRA_PIP_PACKAGES
-            value: {{ .Values.worker.pipPackages }}
